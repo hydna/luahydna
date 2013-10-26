@@ -1,0 +1,28 @@
+# Hydna Lua Client Library
+
+This first version of our client library for Lua implements support for the
+Hydna Push API. Future versions will include support for the full set of
+features.
+
+More info: https://www.hydna.com/
+
+## Dependencies
+
+- LuaSocket
+
+## Usage
+
+The `hydna`-module exposes two functions:
+
+    local hydna = require hydna
+
+    # send a message
+    hydna.send('public.hydna.net', 'hello world from lua')
+
+    # emit a signal
+    hydna.emit('public.hydna.net', 'hello world from lua')
+
+
+## Limitations
+
+This version does not include support for binary data.
